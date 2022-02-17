@@ -21,9 +21,31 @@ namespace TocchioMaratonaApp
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+        Maratone maratone;
+
         public MainWindow()
         {
             InitializeComponent();
+            maratone = new Maratone();
+            DgElencoMaratone.ItemsSource = maratone.elencoMaratone;
+        }
+
+        private void BtnLeggiDaFile_Click(object sender, RoutedEventArgs e)
+        {
+            maratone.LeggiDati();
+            DgElencoMaratone.Items.Refresh();
+        }
+
+       
+
+       
+
+        private void BtnDurata_Click(object sender, RoutedEventArgs e)
+        {
+            string durata = maratone.CalcolaDurata();
+            LblNumMaratone.Content = durata;
         }
     }
 }
+

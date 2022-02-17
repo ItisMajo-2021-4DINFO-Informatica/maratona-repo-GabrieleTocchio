@@ -10,10 +10,10 @@ namespace TocchioMaratonaApp
     {
 
         public string NomeAtleta { get; set; }
-        public string TitoloBrano { get; set; }
-        public string Minuti { get; set; }
-        public string Secondi { get; set; }
-        public string TitoloAlbum { get; set; }
+        public string SocietàDiAppartenenza { get; set; }
+        public int TempoImpiegato { get; set; }
+        public string CittàInCuiSièCorsaLaMaratona { get; set; }
+       
 
 
 
